@@ -5,10 +5,11 @@ coroutines concurrently and collect their results in completion order.
 """
 
 import asyncio
+from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """
     Executes the wait_random coroutine n times concurrently.
     This function schedules n asynchronous tasks using wait_random
