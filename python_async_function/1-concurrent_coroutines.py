@@ -8,7 +8,7 @@ import asyncio
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n, max_delay):
+async def wait_n(n: int, max_delay: int) -> list[float]:
     """
     Executes the wait_random coroutine n times concurrently.
     This function schedules n asynchronous tasks using wait_random
@@ -17,7 +17,6 @@ async def wait_n(n, max_delay):
     Args:
         n (int): The number of times to execute the coroutine.
         max_delay (int): The maximum delay value passed to wait_random.
-
     Returns:
         list[float]: A list of delays returned by each coroutine,
         ordered by completion time.
