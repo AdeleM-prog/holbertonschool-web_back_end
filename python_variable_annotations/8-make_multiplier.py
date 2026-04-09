@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+"""Module that defines a function returning a multiplier function."""
 
 from typing import Callable
-"""Module that defines a function returning a multiplier function."""
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:

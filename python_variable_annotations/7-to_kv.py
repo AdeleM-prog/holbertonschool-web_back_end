@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+"""Module that defines a function to map a string to a squared value."""
 
 from typing import Union, Tuple
-"""Module that defines a function to map a string to a squared value."""
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
