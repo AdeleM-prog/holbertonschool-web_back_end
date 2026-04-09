@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+"""Module for asynchronous tasks with random delay."""
 
 import random
 import asyncio
-"""Module for asynchronous tasks with random delay."""
 
 
 async def wait_random(max_delay=10):
