@@ -68,12 +68,12 @@ class Server:
             prev_page = None
         else:
             prev_page = page - 1
-        if page == total_pages:
+        if page == total_pages or not data:
             next_page = None
         else:
             next_page = page + 1
         return {
-            "page_size": page_size,
+            "page_size": len(data),
             "page": page,
             "data": data,
             "next_page": next_page,
