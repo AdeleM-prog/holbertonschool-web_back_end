@@ -1,2 +1,2 @@
 // my comment
-Mongo.getDBNames()
+show dbs
