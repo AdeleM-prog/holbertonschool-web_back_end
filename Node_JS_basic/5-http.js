@@ -21,22 +21,22 @@ const app = http.createServer((req, res) => {
 
       const students = {};
       slicedata.forEach((splitline) => {
-      const columns = splitline.split(',');
-      const firstname = columns[0];
-      const field = columns[3];
-      if (!students[field]) {
-        students[field] = [];
-      }
-      students[field].push(firstname);
+        const columns = splitline.split(',');
+        const firstname = columns[0];
+        const field = columns[3];
+        if (!students[field]) {
+          students[field] = [];
+        }
+        students[field].push(firstname);
       });
 
       Object.keys(students).forEach((field) => {
-      response += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}\n`;
+        response += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}\n`;
       });
 
       res.end(response);
-    })
     });
-    }
+  }
+});
 app.listen(1245);
 module.exports = app;
