@@ -31,10 +31,10 @@ const app = http.createServer((req, res) => {
       });
 
       Object.keys(students).forEach((field) => {
-        response += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}\n`;
+        response += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}`;
       });
 
-      res.end(response);
+      res.end(response.);
     });
   }
 });
