@@ -5,7 +5,7 @@ const app = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   if (req.url === '/') {
-    res.end('Hello Holberton School!\n');
+    res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
     const filePath = process.argv[2];
     fs.readFile(filePath, 'utf8', (err, data) => {
